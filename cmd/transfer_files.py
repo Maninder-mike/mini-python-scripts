@@ -1,3 +1,6 @@
+# author : maninder
+# version : 0.1.0
+
 import os
 import re
 import shutil
@@ -5,7 +8,7 @@ import argparse
 
 # run file like (python transfer_files.py '.json') or any suppoted file ext.
 my_parse = argparse.ArgumentParser()
-my_parse.version = "1.0"
+my_parse.version = "0.1.0"
 my_parse.add_argument(
     "input",
     help="add '.json' for json file trasfer etc.",
@@ -25,11 +28,23 @@ list_files = os.listdir(main)
 
 # work on full ext support
 ext_list1 = [".txt", ".py", ".json", ".exe", ".pdf", ".zip", ".msi", ".png", ".log"]
-exe_list = [
-    {
-        
-    }
-]
+
+def file_exention(name:str)->str:
+    exe_list = [
+        text:{
+            ".txt",
+
+        },
+        python:{
+            ".py"
+        },
+        image:{
+            ".png"
+        },
+        executable:{
+            ".exe"
+        }
+    ]
 
 for x in list_files:
     # match = re.match("[A-Za-z0-9]+\.py", x)
